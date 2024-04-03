@@ -23,9 +23,13 @@ public class Humain implements Consommation{
 	        this.age = age;
 	    }
 	    
-	    public void ami(Humain ami) {
+	    public void ami(Humain ami, int dureeAmitiee) {
 	        amis.add(ami);
 	        System.out.println(this.prenom + " est maintenant ami avec " + ami.getPrenom() + ".");
+	    }
+	    
+	    public void ami(Humain ami) {
+	        ami(ami, 100); // Appel à la méthode ami() avec la durée d'amitié par défaut de 100 jours
 	    }
 	    
 	    public void details() {
@@ -72,6 +76,15 @@ public class Humain implements Consommation{
 		public void setAge(int age) {
 			this.age = age;
 		}
-	    
+
+		public List<Humain> getAmis() {
+			return amis;
+		}
+
+		public void setAmis(List<Humain> amis) {
+			this.amis = amis;
+		}
+
+		
 	    
 }
