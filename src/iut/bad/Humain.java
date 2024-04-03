@@ -24,6 +24,14 @@ public class Humain {
 	        System.out.println(toString());
 	    }
 	    
+	    public void manger() {
+	        System.out.println("L'humain mange.");
+	    }
+
+	    // Méthode pour boire
+	    public void boire() {
+	        System.out.println("L'humain boit.");
+	    }
 	    
 
 		@Override
