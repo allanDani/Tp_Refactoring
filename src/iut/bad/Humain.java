@@ -1,9 +1,12 @@
 package iut.bad;
 
+import java.util.List;
+
 public class Humain implements Consommation{
 	 private String nom;
 	    private String prenom;
 	    private int age;
+	    private List<Humain> amis;
 
 	    // Constructeur par défaut (sans paramètres)
 	    public Humain() {
@@ -18,6 +21,11 @@ public class Humain implements Consommation{
 	        this.nom = nom;
 	        this.prenom = prenom;
 	        this.age = age;
+	    }
+	    
+	    public void ami(Humain ami) {
+	        amis.add(ami);
+	        System.out.println(this.prenom + " est maintenant ami avec " + ami.getPrenom() + ".");
 	    }
 	    
 	    public void details() {
